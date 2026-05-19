@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TimeTravel Agency - Visit History</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">⏰ TimeTravel Agency</div>
+            <ul>
+                <li><a onclick="scrollToSection('hero')">Home</a></li>
+                <li><a
+                        onclick="scrollToSection('destinations')">Destinations</a></li>
+                <li><a onclick="scrollToSection('chatbot')">Chat with
+                        AI</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h1>Welcome to TimeTravel Agency</h1>
+                <p>Visit history like never before</p>
+                <button class="cta-button"
+                    onclick="scrollToSection('destinations')">Explore
+                    Destinations</button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <h2>About Our Agency</h2>
+            <p>
+                Welcome to TimeTravel Agency, your gateway to experiencing
+                history firsthand.
+                Explore magnificent moments across centuries with our
+                cutting-edge time travel technology
+                and AI-powered travel guidance. From the Eiffel Tower's
+                construction in Paris 1889,
+                to the age of dinosaurs in the Crétacé, to the Renaissance in
+                Florence 1504 -
+                every journey is an adventure.
+            </p>
+        </section>
+
+        <!-- Destinations Section -->
+        <section class="destinations" id="destinations">
+            <h2>Our Destinations</h2>
+            <div class="destination-grid">
+                <!-- Paris 1889 -->
+                <div class="destination-card">
+                    <img class="destination-image"
+                        data-src="photos/paris.png"
+                        src="https://via.placeholder.com/500x300?text=Loading"
+                        alt="Paris 1889" loading="lazy">
+                    <div class="destination-info">
+                        <h3>Paris 1889</h3>
+                        <p>Experience the construction of the iconic Eiffel
+                            Tower. Witness the Belle Époque era in full swing
+                            with its art, culture, and revolutionary
+                            innovations.</p>
+                        <button class="learn-more"
+                            onclick="openModal('paris')">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Crétacé -->
+                <div class="destination-card">
+                    <img class="destination-image"
+                        data-src="photos/cretace.png"
+                        src="https://via.placeholder.com/500x300?text=Loading"
+                        alt="Cretace Period" loading="lazy">
+                    <div class="destination-info">
+                        <h3>Crétacé Period</h3>
+                        <p>Step into the age of dinosaurs! Discover prehistoric
+                            landscapes, giant reptiles, and the raw power of
+                            nature millions of years ago.</p>
+                        <button class="learn-more"
+                            onclick="openModal('cretace')">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Florence 1504 -->
+                <div class="destination-card">
+                    <img class="destination-image"
+                        data-src="photos/florence.png"
+                        src="https://via.placeholder.com/500x300?text=Loading"
+                        alt="Florence 1504" loading="lazy">
+                    <div class="destination-info">
+                        <h3>Florence 1504</h3>
+                        <p>Immerse yourself in the Renaissance masterpiece.
+                            Witness Michelangelo's David being unveiled and
+                            experience the birthplace of modern art.</p>
+                        <button class="learn-more"
+                            onclick="openModal('florence')">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modals -->
+        <div id="parisModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('paris')">&times;</span>
+                <h2>🗼 Paris 1889</h2>
+                <p><strong>Location:</strong> Paris, France</p>
+                <p><strong>Era:</strong> 1889 - The Belle Époque</p>
+                <p>Experience one of history's most transformative moments.
+                    Watch the Eiffel Tower rise from the ground
+                    during the 1889 World's Fair. Stroll through the cobblestone
+                    streets, enjoy impressionist art at Montmartre,
+                    and witness the birth of modern urban design.</p>
+                <p><strong>Highlights:</strong></p>
+                <ul style="margin-left: 1rem; margin-bottom: 1rem;">
+                    <li>Eiffel Tower construction</li>
+                    <li>World's Fair (Exposition Universelle)</li>
+                    <li>Montmartre artist community</li>
+                    <li>Belle Époque architecture</li>
+                </ul>
+                <button class="cta-button"
+                    onclick="closeModal('paris')">Close</button>
+            </div>
+        </div>
+
+        <div id="cretaceModal" class="modal">
+            <div class="modal-content">
+                <span class="close"
+                    onclick="closeModal('cretace')">&times;</span>
+                <h2>🦕 Crétacé Period</h2>
+                <p><strong>Period:</strong> Cretaceous (145-66 million years
+                    ago)</p>
+                <p><strong>Location:</strong> Prehistoric Earth</p>
+                <p>Journey back to when dinosaurs ruled the Earth. Experience
+                    the majesty of Triceratops herds,
+                    the terror of T-Rex hunts, and the flight of ancient
+                    pterosaurs. Witness lush prehistoric forests
+                    and vast oceans teeming with life.</p>
+                <p><strong>Highlights:</strong></p>
+                <ul style="margin-left: 1rem; margin-bottom: 1rem;">
+                    <li>Dinosaur encounters</li>
+                    <li>Prehistoric flora</li>
+                    <li>Ancient oceans</li>
+                    <li>Fossil sites</li>
+                </ul>
+                <button class="cta-button"
+                    onclick="closeModal('cretace')">Close</button>
+            </div>
+        </div>
+
+        <div id="florenceModal" class="modal">
+            <div class="modal-content">
+                <span class="close"
+                    onclick="closeModal('florence')">&times;</span>
+                <h2>🎨 Florence 1504</h2>
+                <p><strong>Location:</strong> Florence, Italy</p>
+                <p><strong>Era:</strong> 1504 - High Renaissance</p>
+                <p>Witness the unveiling of Michelangelo's David, one of
+                    history's greatest sculptures.
+                    Walk through Renaissance Florence and meet the greatest
+                    artists and thinkers of the age.
+                    Experience the cultural revolution that shaped Western
+                    civilization.</p>
+                <p><strong>Highlights:</strong></p>
+                <ul style="margin-left: 1rem; margin-bottom: 1rem;">
+                    <li>Michelangelo's David unveiling</li>
+                    <li>Renaissance art studios</li>
+                    <li>Medici patronage</li>
+                    <li>Historic architecture</li>
+                </ul>
+                <button class="cta-button"
+                    onclick="closeModal('florence')">Close</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 TimeTravel Agency. All rights reserved. | Exploring
+                History, One Time Jump at a Time.</p>
+        </footer>
+
+        <!-- Floating Chatbot Widget -->
+        <div id="chatbot-widget" class="chatbot-widget">
+            <!-- Floating Button -->
+            <button id="chatbot-toggle" class="chatbot-toggle"
+                title="Chat avec TimeTravel Agency">
+                <span class="chatbot-icon">💬</span>
+            </button>
+
+            <!-- Chat Window -->
+            <div id="chatbot-window" class="chatbot-window hidden">
+                <div class="chatbot-widget-header">
+                    <h3>TimeTravel Assistant</h3>
+                    <button id="chatbot-close" class="chatbot-close">✕</button>
+                </div>
+                <div id="chatbot-widget-messages"
+                    class="chatbot-widget-messages">
+                    <div class="chatbot-widget-message bot">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">Welcome to TimeTravel
+                            Agency! 🚀 I'm your virtual assistant. How can I
+                            help you today?</div>
+                    </div>
+                </div>
+                <div class="chatbot-widget-faq">
+                    <div class="faq-label">Quick Questions:</div>
+                    <div class="faq-item"
+                        onclick="askFAQ('What is the best time to visit Paris 1889?')">❓
+                        Paris 1889?</div>
+                    <div class="faq-item"
+                        onclick="askFAQ('Are there safety precautions for the Crétacé period?')">❓
+                        Crétacé safety?</div>
+                    <div class="faq-item"
+                        onclick="askFAQ('How long can I stay in Florence 1504?')">❓
+                        Florence duration?</div>
+                    <div class="faq-item"
+                        onclick="askFAQ('What should I pack for time travel?')">❓
+                        What to pack?</div>
+                    <div class="faq-item"
+                        onclick="askFAQ('Is time travel safe?')">❓ Time travel
+                        safety?</div>
+                </div>
+                <div class="chatbot-widget-input-area">
+                    <input
+                        type="text"
+                        id="chatbot-widget-input"
+                        class="chatbot-widget-input"
+                        placeholder="Ask about destinations..."
+                        onkeypress="if(event.key==='Enter') sendWidgetMessage()">
+                    <button class="chatbot-widget-send"
+                        onclick="sendWidgetMessage()">
+                        <span>→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="script.js"></script>
+    </body>
+</html>
